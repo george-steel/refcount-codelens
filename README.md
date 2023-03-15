@@ -1,29 +1,9 @@
-# CodeLens Sample
+# Reference Count CodeLens
 
-This is a sample extension that shows the usage of the CodeLens API.
+Extension to detect unreferenced code across an entire workspace.
+Unlike most language tooling, it does not assume that all public/exported methods are live (as in a pubically-released library),
+and is useful for working with multi-package application code.
 
-It is not intended as a production quality extension.
-
-- Create a new file
-- Write anything
-- Click on the CodeLens for action example
-- Can be enabled or disabled by command palette
-
-## Demo
-
-![demo](demo.gif)
-
-## VS Code API
-
-### `languages` module
-
-- [`languages.registerCodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#languages.registerCodeLensProvider)
-
-### CodeLens Provider
-
-- [`CodeLensProvider`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider)
-- [`CodeLensProvider.provideCodeLenses`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider.provideCodeLenses)
-- [`CodeLensProvider.resolveCodeLens`](https://code.visualstudio.com/api/references/vscode-api#CodeLensProvider.resolveCodeLens)
 
 ## Running the Sample
 

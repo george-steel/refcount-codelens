@@ -1,9 +1,9 @@
 {
-    "name": "codelens-sample",
-    "displayName": "CodeLens Sample",
-    "description": "Samples for VS Code's CodeLens API",
+    "name": "refcount-codelens",
+    "displayName": "Reference Count CodeLens",
+    "description": "Dead code detection across an entire workspace",
     "version": "0.0.1",
-    "publisher": "ms-vscode",
+    "publisher": "george-steel",
     "private": true,
     "license": "MIT",
     "repository": {
@@ -24,20 +24,27 @@
         "commands": [
             {
                 "title": "Enable CodeLens",
-                "command": "codelens-sample.enableCodeLens",
-                "category": "CodeLens Sample"
+                "command": "refcount-codelens.enableCodeLens",
+                "category": "Reference Count CodeLens"
             },
             {
                 "title": "Disable Codelens",
-                "command": "codelens-sample.disableCodeLens",
-                "category": "CodeLens Sample"
+                "command": "refcount-codelans.disableCodeLens",
+                "category": "Reference Count CodeLens"
             }
         ],
         "configuration": {
+            "title": "Reference Count",
             "properties": {
-                "codelens-sample.enableCodeLens": {
+                "refcount-codelens.enableCodeLens": {
                     "type": "boolean",
-                    "default": true
+                    "default": true,
+                    "description": "Enable a CodeLens using the find all references feature to detect unreferenced code."
+                },
+                "refcount-codelens.showNonzero": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Show a reference count on all top-level symbols, even live ones."
                 }
             }
         }
